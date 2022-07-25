@@ -1,0 +1,37 @@
+{% extends 'blogsetup/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} <title>Crear post</title>{% endblock title %}
+
+{% block contenido %}
+<div class="container">
+<div class="row">
+    <div class="col-4-col-md-4 offset-md">
+        <div class="card">
+            <br>
+            <div class="card-body">
+                <h2> Editar post</h2>
+                <hr>
+
+            <form action="" method="POST" enctype="multipart/form-data" style=" width: 100%; margin:auto;">
+                {% csrf_token %}
+                
+                {{form | crispy }}
+                <br>
+                <div class="d-flex justify-content-md-end" >
+                    <a type="reset" href="{% url 'listado' %}" class="btn btn-outline-secondary btn-md">Cancelar</a>
+                    &nbsp;
+                    <a type="submit" href="{% url 'listado' %}" class="btn btn-outline-success btn-md">Editar</a>
+
+                </div>
+        
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+
+{% endblock contenido %}

@@ -1,0 +1,31 @@
+{% extends 'blogsetup/base.html' %}
+{% load static %}
+
+{% block title %} <title>Inicio</title>{% endblock title %}
+
+{% block contenido %}
+<div class="container">
+    <div class="row">
+        <!-- Blog entries-->
+        {% for contenido in contenidos %}
+        <div class="col-lg-6" >
+            <!-- Featured blog post-->
+            
+            <div class="card mb-4" >
+                <a href="#!"><img class="card-img-top" style = "height: 20rem;" src={{contenido.imagen.url}} alt="..." /></a>
+                <div class="card-body">
+                    <div class="small text-muted">{{contenido.fecha}}</div>
+                    <h2 class="card-title">{{contenido.titulo}}</h2>
+                    <p class="card-text">{{contenido.subtitulo}}</p>
+                    <a class="btn btn-primary" href="{% url 'blogpost' contenido.id %}">Leer más →</a>
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock contenido %}

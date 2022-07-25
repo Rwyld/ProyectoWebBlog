@@ -1,0 +1,49 @@
+{% extends 'blogsetup/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} <title>Registro</title>{% endblock title %}
+
+{% block headerpag %}
+<header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+        <div class="text-center my-5">
+            {% block titlepag %}
+                <h1 class="fw-bolder">Registrate!</h1>
+                <h4 class="subtitle">Y unete a nuestra comunidad</h4>
+            {% endblock titlepag %}
+        </div>
+    </div>
+</header>
+{% endblock headerpag %}
+
+{% block contenido %}
+
+<div class="row">
+    <div class="col-8 col-md-6 offset-md-3">
+        <div class="card">
+            <br>
+            <div class="card-body">
+                {% if "valido" in request.GET %}
+                <br>
+                <p style="text-align:center;" > Te has registrado correctamente! </p>
+                <br>
+                {% endif %}
+            
+            <form action="" method="POST" style=" width: 100%; margin:auto;">
+                {% csrf_token %}
+                <table>{{form | crispy }}</table>
+                <br>
+                <div class="d-grid justify-content-md-end" >
+                    <button type="submit" class="btn btn-outline-secondary btn-md">Registrarse</button>
+                </div>
+        
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+
+{% endblock contenido %}

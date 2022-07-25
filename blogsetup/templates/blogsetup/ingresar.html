@@ -1,0 +1,49 @@
+{% extends 'blogsetup/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} <title>Ingresar</title>{% endblock title %}
+
+{% block headerpag %}
+<header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+        <div class="text-center my-5">
+            {% block titlepag %}
+                <h1 class="fw-bolder">Inicia tu sesión</h1>
+                <h4 class="subtitle">Recuerda no compartir tus contraseñas a nadie</h4>
+            {% endblock titlepag %}
+        </div>
+    </div>
+</header>
+{% endblock headerpag %}
+
+{% block contenido %}
+
+<div class="row">
+    <div class="col-8 col-md-4 offset-md-4">
+        <div class="card">
+            <br>
+            <div class="card-body">
+            <form action="" method="POST" style=" width: 70%; margin:auto;">
+                {% csrf_token %}
+                 
+                {% if messages %}
+                    {% for mensaje in messages %}
+                        <span style="color: red;">{{mensaje}}</span>
+                    {% endfor %}
+                {% endif %}
+
+                {{form | crispy }}
+                <br>
+                <div class="d-grid justify-content-md-end" >
+                    <button type="submit" class="btn btn-outline-secondary btn-md">Iniciar Sesión</button>
+                </div>
+        
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+{% endblock contenido %}

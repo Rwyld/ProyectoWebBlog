@@ -1,0 +1,33 @@
+{% extends 'blogsetup/base.html' %}
+{% load static %}
+
+{% block title %} <title>Acerca</title>{% endblock title %}
+
+{% block headerpag %}
+<header class="py-5 bg-light border-bottom mb-4">
+    <div class="container">
+        <div class="text-center my-5">
+            {% block titlepag %}
+                <h1 class="fw-bolder">Acerca de nosotros</h1>
+            {% endblock titlepag %}
+        </div>
+    </div>
+</header>
+{% endblock headerpag %}
+
+{% block contenido %}
+<div class="row">
+    <div class="col-8 col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-body">
+                <p> Somos un a pagina web abierta a la comunidad, donde puedes postear lo que quieras siempre y cuando siendo respetuoso.
+                    Estamos abiertos a seguir mejorando, asi que cualquier opinion en que nos ayude a mejorar el blog en que compartimos 
+                    sera bienvenida!
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock contenido %}

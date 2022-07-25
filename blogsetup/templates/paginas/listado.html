@@ -1,0 +1,48 @@
+{% extends 'blogsetup/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} <title>Crear post</title>{% endblock title %}
+
+{% block contenido %}
+<div class="container">
+<div class="row">
+    <div class="col-4-col-md-4 offset-md">
+        <div class="card">
+            <br>
+            <div class="card-body">
+                <h2> Posts</h2>
+                <hr>
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Opciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for contenido in contenidos %}
+                        <tr>
+                          <td>{{contenido.titulo}}</td>
+                          <td>{{contenido.fecha}}</td>
+                          <td>{{contenido.update}}</td>
+                          <td> <a href="{% url 'editar' contenido.id %}" class="btn btn-outline-info btn-md"> Editar</a></td>
+                          <td> <a href="{% url 'eliminar' contenido.id %}" class="btn btn-outline-danger btn-md"> Eliminar</a></td>
+                        </tr>
+
+                        {% endfor %}
+                    </tbody>
+
+
+                </table>    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+
+{% endblock contenido %}
