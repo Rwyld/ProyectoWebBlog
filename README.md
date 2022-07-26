@@ -26,10 +26,11 @@ password:   admin
 
 **Mensaje:**
 
-      Me faltaron unas cosas que no encontre la forma de como realizarlos o almenos se me habran pasado en algun momento,
-      utilice varias fuentes para poder realizar el trabajo, a parte de los cursos de Coder, ya que tuve constante problemas
-      con la pagina, no me cargaba nada o era dificil de acceder a ella (tenia demoras para poder ingresar al curso de unas
-      2 hrs en cargar los contenido y ni hablar de los mensajes, por lo que la bote y empece a trabajar de otras fuentes)
+      Me faltaron unas cosas que no encontre la forma de como realizarlos o almenos se me habran pasado en 
+      algun momento, utilice varias fuentes para poder realizar el trabajo, a parte de los cursos de Coder,
+      ya que tuve constante problemas con la pagina, no me cargaba nada o era dificil de acceder a ella 
+      (tenia demoras para poder ingresar al curso de unas 2 hrs en cargar los contenido y ni hablar de los 
+      mensajes, por lo que la bote y empece a trabajar de otras fuentes)
 
 
 
